@@ -1,16 +1,30 @@
+import { useState } from 'react'
+
 function Wordle() {
 
-    const wordData = 'Hello'
+    const answerData = 'Hello'
 
+    const [guess, setGuess] = useState(['','','','',''])
+
+    
+
+    function guess
 
     return(
         <div>
-            {wordData}
+            {answerData}
 
             <br />
 
-            <input type='text' maxlength='1' />
-            <input type='text' maxlength='1' />
+            input:
+            <br />
+            <form>
+                {guess.map((guessObj) => {
+                    return(
+                        <input type='text' value={guessObj} />
+                    )
+                })}
+            </form>
 
         </div>
     )
